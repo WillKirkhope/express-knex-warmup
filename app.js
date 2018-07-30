@@ -1,7 +1,7 @@
-const express
-const bodyParser
-const cors
-const app
+const express = require ('express')
+const bodyParser = require ('bodyParser')
+const cors = require ('cors')
+const app = express()
 
 app.use()
 app.use()
