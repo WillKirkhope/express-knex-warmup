@@ -1,5 +1,5 @@
 {
-  "name": "g90-server",
+  "name": "g90server",
   "version": "1.0.0",
   "description": "A database of g90 glory",
   "main": "app.js",
