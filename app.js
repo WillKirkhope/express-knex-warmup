@@ -26,7 +26,24 @@ app.get('/:id', function(request,response){
   })
 })
 
+app.post('/', function(request,response,next){
+  queries.postOne(request.params.body)
+  .then(student => {
+    response.status(201).json({student})
+  })
+})
 
+app.delete('/:id', function(request,response,next){
+  queries.deleteOne(request.params.id)
+  .then(() => {
+    response.status(200)
+  })
+})
+
+app.put('/:id', function(request,response,next){
+  queries.update(request.body.id, request.body.name)
+  .then(updatedUser => response.json({updatedUser}))
+})
 
 app.use(function(error,request,response,next){
   console.error(error.stack)
